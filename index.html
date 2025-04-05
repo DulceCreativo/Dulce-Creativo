@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"  />
+        <title> Dulce Creativo </title>
+        
+    </head>
+    <body>
+        <h1>
+            Aprendiendo repostería
+        </h1>
+        <p>Hola somos Dulce Creativo </p>
+        <img src="Logo.png" alt="Logo" width="400">
+
+        <h2>Elige tu clase de repostería</h2>
+
+        <label for="clase">clase:</label>
+        <select id="clase">
+            <option value="">Seleciona una opción</option>
+            <option value="clasica">Pastelería clasica</option>
+            <option value="decoracion">Decoración de pasteles</option>
+            <option value="vegana">Repostería vegana sin gluten</option>
+            <option value="internacional">Postres internacionales</option>
+            <option value="creativa">Reposteria creativa para eventos</option>
+        </select>
+
+        <button onclick="mostrarZoom()">Enlace de zoom</button>
+
+        <p id="linkZoom"></p>
+
+        <script >
+            function mostrarZoom() {
+             const clase = document.getElementById('clase').value;
+             const zoomLink = 'https://us05web.zoom.us/j/89957337456?pwd=I4AYNDsO2NaeSghGVjDTW0WJteRG1d.1';
+
+                if (clase === ''){
+                    document.getElementById('linkZoom').innerText = 'Por favor, selecciona una clase';
+                } else {
+                    document.getElementById('linkZoom').innerHTML = `Enlace de Zoom para tu clase: <a href=${zoomLink}" target="_blank>Entrar a la clase</a>`;
+                } 
+        
+                }
+             
+                
+            
+            
+                   
+        </script>
+    </body>
+</html>
