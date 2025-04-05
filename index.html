@@ -12,12 +12,28 @@
     </head>
     <body>
         <h1>
-            Aprendiendo repostería
+            Dulce Creativo: Aprendiendo repostería
         </h1>
-        <p>Hola somos Dulce Creativo </p>
+        <p>Hola! Bienvenido a nuestra página, somos Dulce Creativo, queremos brindarte el mejor servicio en clases de repostería en línea</p>
         <img src="Logo.png" alt="Logo" width="400">
 
-        <h2>Elige tu clase de repostería</h2>
+        <p> Contamos con diferentes módulos para que puedas elegir el tipo de clases y el módulo según tu experiencia</p>
+
+        <h2> Con tu suscripción puedes optar por un kit de repostería</h2>
+        <img src="Kit.png" alt="Kit" width="400">
+
+
+        <h3> Elige tu módulo de aprendizaje</h3>
+        <label for="modulo">módulo de aprendizaje</label>
+        <select id="modulo">
+            <option value="">selecciona una opción</option>
+            <option value="principiante"> Nivel principiante</option>
+            <option value="basico"> Nivel básico</option>
+            <option value="intermedio"> Nivel intermedio</option>
+            <option value="avanzado"> Nivel avanzado</option>
+        </select>
+
+        <h3>Elige tu clase de repostería</h3>
 
         <label for="clase">clase:</label>
         <select id="clase">
@@ -29,24 +45,12 @@
             <option value="creativa">Reposteria creativa para eventos</option>
         </select>
 
-        <button onclick="mostrarZoom()">Enlace de zoom</button>
-
-        <p id="linkZoom"></p>
-
-        <script >
-            function mostrarZoom() {
-             const clase = document.getElementById('clase').value;
-             const zoomLink = 'https://us05web.zoom.us/j/89957337456?pwd=I4AYNDsO2NaeSghGVjDTW0WJteRG1d.1';
-
-                if (clase === ''){
-                    document.getElementById('linkZoom').innerText = 'Por favor, selecciona una clase';
-                } else {
-                    document.getElementById('linkZoom').innerHTML = `Enlace de Zoom para tu clase: <a href=${zoomLink}" target="_blank>Entrar a la clase</a>`;
-                } 
-        
-                }
              
-                
+        <h3> Ingresa tu correo electrónico para enviarte el link de tu clase</h3 >   
+            <form>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+            </form> 
             
             
                    
